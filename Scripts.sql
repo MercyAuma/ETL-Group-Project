@@ -19,12 +19,11 @@ CREATE DATABASE "Phone_db"
 
 CREATE TABLE public.phone_rating
 (
-    id integer NOT NULL,
+    id character varying(30) COLLATE pg_catalog."default" NOT NULL,
     phone_brand character varying(30) COLLATE pg_catalog."default",
     phone_model character varying(250) COLLATE pg_catalog."default" NOT NULL,
     phone_price numeric NOT NULL,
-    avg_rating numeric NOT NULL, 
-    review_count integer,
+    avg_rating numeric NOT NULL,
     CONSTRAINT phone_rating_pkey PRIMARY KEY (id)
 )
 WITH (
